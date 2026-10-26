@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b20">
+<title>For My Bebu, Binita ❤️</title>
+
+<style>
+:root {
+  --night: #170b20;
+  --rose: #ff729e;
+  --pink: #ffc0d5;
+  --cream: #fff1f6;
+  --muted: #e7bbce;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(
+    ellipse at 50% -10%,
+    #572343 0%,
+    var(--night) 56%
+  );
+  color: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .17;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.wrap {
+  width: min(900px, 92%);
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  font: 12px Arial, sans-serif;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+
+.brand {
+  color: var(--pink);
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0 75px;
+}
+
+.eyebrow {
+  font: 11px Arial, sans-serif;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.orbit {
+  width: 118px;
+  height: 118px;
+  border: 1px solid #ff8db24f;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 25px 0 20px;
+  box-shadow: 0 0 55px #ff57902b;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.orbit span {
+  font-size: 52px;
+  animation: beat 1.4s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.15); }
+}
+
+@keyframes glow {
+  50% { box-shadow: 0 0 75px #ff579047; }
+}
+
+h1 {
+  font-size: clamp(48px, 10vw, 92px);
+  font-weight: normal;
+  line-height: .98;
+  margin: 10px 0 22px;
+  letter-spacing: -.04em;
+}
+
+h1 em {
+  font-weight: normal;
+  color: var(--pink);
+}
+
+.hero p {
+  font: 15px/1.9 Arial, sans-serif;
+  color: var(--muted);
+  max-width: 540px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.btn {
+  border: 1px solid #ff8db277;
+  background: var(--rose);
+  color: #351021;
+  padding: 14px 21px;
+  border-radius: 999px;
+  font: 700 12px Arial, sans-serif;
+  letter-spacing: .04em;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--cream);
+  border-color: #ffc0d55c;
+}
+
+section {
+  padding: 28px 0 45px;
+  scroll-margin-top: 20px;
+}
+
+.kicker {
+  text-align: center;
+  color: var(--rose);
+  font: 10px Arial, sans-serif;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(30px, 6vw, 48px);
+  font-weight: normal;
+  margin: 13px 0 26px;
+}
+
+.panel {
+  background: rgba(255,240,247,.075);
+  border: 1px solid #ffbad51c;
+  border-radius: 24px;
+  padding: clamp(24px, 6vw, 48px);
+  box-shadow: 0 20px 80px #00000015;
+}
+
+.letter {
+  max-width: 650px;
+  margin: auto;
+  font-size: clamp(17px, 2.7vw, 20px);
+  line-height: 2;
+  color: #ffedf4;
+  white-space: pre-line;
+}
+
+.sign {
+  text-align: right;
+  color: var(--pink);
+  font-style: italic;
+  margin-top: 25px;
+}
+
+.line-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.line-card {
+  padding: 25px 22px;
+  border: 1px solid #ffbad51e;
+  background: #ffffff07;
+  border-radius: 19px;
+}
+
+.line-card .emoji {
+  font-size: 24px;
+}
+
+.line-card p {
+  font-size: 18px;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.small {
+  font: 13px/1.8 Arial, sans-serif;
+  color: var(--muted);
+}
+
+.song-note {
+  text-align: center;
+  line-height: 1.9;
+  font-size: 20px;
+  color: #ffe3ed;
+}
+
+.song-label {
+  display: inline-block;
+  border: 1px solid #ffbad545;
+  border-radius: 999px;
+  padding: 8px 13px;
+  color: var(--pink);
+  font: 11px Arial, sans-serif;
+  margin-bottom: 16px;
+}
+
+.center {
+  text-align: center;
+}
+
+.secret {
+  display: none;
+  font-size: clamp(21px, 4vw, 31px);
+  line-height: 1.7;
+  color: var(--pink);
+  margin: 25px auto 0;
+  max-width: 620px;
+  white-space: pre-line;
+  animation: rise .7s ease;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 35px 0 45px;
+  color: #cda7ba;
+  font: 12px/2 Arial, sans-serif;
+}
+
+.floater {
+  position: fixed;
+  z-index: 4;
+  bottom: -35px;
+  pointer-events: none;
+  animation: float linear forwards;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-115vh) rotate(28deg);
+    opacity: 0;
+  }
+}
+
+.divider {
+  text-align: center;
+  color: #ff8eb6;
+  letter-spacing: .7em;
+  margin: 25px 0;
+}
+
+@media (max-width: 600px) {
+  .line-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 79vh;
+  }
+
+  .panel {
+    border-radius: 20px;
+  }
+
+  nav {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<nav>
+  <span class="brand">♥ JUST FOR BEBU</span>
+  <span>FROM DALLU, WITH LOVE</span>
+</nav>
+
+<header class="hero">
+
+  <div class="eyebrow">For my favorite person</div>
+
+  <div class="orbit">
+    <span>❤️</span>
+  </div>
+
+  <h1>Hey,<br><em>Bebu.</em></h1>
+
+  <p>
+    Binita, yo sano website timro lagi ho hai.
+    Dallu le dherai ramrari words milauna nasake pani,
+    timilai maya chai ekdam man dekhi garchha.
+    Bistarai kholnu, bebu. Sabai timrai lagi ho. 🥹❤️
+  </p>
+
+  <div class="actions">
+    <button class="btn" onclick="goTo('letter')">
+      Open Dallu's heart 💌
+    </button>
+
+    <button class="btn ghost" onclick="shower(35)">
+      Send me some hearts ✨
+    </button>
+  </div>
+
+</header>
+
+<section id="letter">
+
+  <div class="kicker">Page 01 · From Dallu, honestly</div>
+
+  <h2>Mero Bebu lai… 💌</h2>
+
+  <div class="panel">
+    <div class="letter">Meri Bebu, mero Binita ❤️
+
+Khai bebu, timilai maya garchhu bhanera matra ta pug्दaina jasto lagchha. Kahile kahi timro message aauchha ani ma afai hasirako hunchhu—phone herera kina hasis bhanera kasaile sodhyo bhane pani k bhannu? Mero smile ko reason timi hau ni. 🥹
+
+Timi sanga kura garda din ali ramro huncha. Mood bigreko bela timro euta maya bhareko kura le pani man halka huncha. Ani timi risayeko bela chai, “la baba, yo meri pyari bebu lai kasari hasaune hola” bhanera sochna thalchhu. 😂❤️
+
+Ma Dallu, perfect chai pakkai haina hai. Kahile kura bujhna dhilo hola, kahile k bhannu parne thiyo bhanera pachhi realize hola. Tara timro feelings lai ignore garna chai chahanna. Kehi kura namile, risayera chup basnu bhanda kura garera bujhna man chha. Timilai hasaauna, timro kura sunnu, ani timro side ma basna sikdai janu chha.
+
+Malai thulo-thulo kura bhanda sano moments haru dherai pyara lagchha—timro random message, timro hasi, timi le malai samjheko sano kura, ani kunai din kei special nagari sangai basna paunu. Future ko sabai kura aile nai thaha chhaina, tara timi sanga ramra memories banauna chai man dekhi chahanchhu.
+
+Kahile ekdam ramro geet bajirako hos, halka hawa chaleko hos, timi mero najik hos, ani ma timro haat samatera timilai herna paun… bas, tyo moment ma aru kehi chahidaina hola. Movie jasto perfect hunu pardaina; timi ra ma real bhayera sangai huna paye pugchha. 🌙
+
+Yo website banauda timilai ke lekhum bhanera dherai sochhe. Last ma bujhe—sab kura fancy hunu pardaina raichha. Timilai yaad aayo, timilai maya garchhu, ani timro face ma sano smile aaos bhanera banako ho.
+
+So, mero Bebu, jaba malai miss garchhau, yo page kholnu hai. Dallu le timilai samjhera banako sano corner ho yo. ❤️
+
+      <div class="sign">
+        Dherai dherai maya, timro Dallu. 💗
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="divider">♡ · ♡ · ♡</div>
+
+<section>
+
+  <div class="kicker">Page 02 · Sano sano kura</div>
+
+  <h2>Bebu, timi kina special chhau? 🌷</h2>
+
+  <div class="line-grid">
+
+    <article class="line-card">
+      <div class="emoji">🌷</div>
+      <p>
+        Timro smile mero favorite notification ho.
+        Phone le sound nagare pani timro message aayo ki
+        bhanera herna man lagchha. 😂❤️
+      </p>
+    </article>
+
+    <article class="line-card">
+      <div class="emoji">🫶</div>
+      <p>
+        Sansar jati busy bhaye pani, timi sanga dui minute
+        ramrari kura garna paye din ali complete jasto lagchha.
+      </p>
+    </article>
+
+    <article class="line-card">
+      <div class="emoji">🌧️</div>
+      <p>
+        Khusi huda sangai hasna man chha; garo huda timro
+        kura sunnu ra “Bebu, ma chhu ni” bhanna man chha.
+      </p>
+    </article>
+
+    <article class="line-card">
+      <div class="emoji">♾️</div>
+      <p>
+        Timi sadhai happy matra hunuparchha bhanne hoina.
+        Timro real feelings—khusi, ris, sadness—sabai ko lagi
+        timro manche banna man chha.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section>
+
+  <div class="kicker">Page 03 · Hamro movie scene</div>
+
+  <h2>Timi, ma, ani euta geet… 🎶</h2>
+
+  <div class="panel center">
+
+    <span class="song-label">
+      THAT “PERFECT” KIND OF FEELING 🎧
+    </span>
+
+    <p class="song-note">
+      Imagine gara na, bebu—raat ali shanta chha,
+      hami sangai chhau, background ma hamro favorite
+      romantic song bajirako chha. Ma timilai herchhu ani
+      man ma euta kura aauchha…
+    </p>
+
+    <p class="song-note" style="color:var(--pink);font-style:italic">
+      “Dherai ramra kura haru dekhe hola maile,
+      tara mero man le rojheko chai timilai ho.”
+    </p>
+
+    <p class="small">
+      Yo hamro afnai line ho. Geet le mood banaos,
+      tara memories chai hami afai banaune hai. ❤️
+    </p>
+
+  </div>
+</section>
+
+<section>
+
+  <div class="kicker">Page 04 · Dallu ko promise</div>
+
+  <h2>Perfect hunchhu bhandina, bebu…</h2>
+
+  <div class="panel center">
+
+    <p class="song-note">
+      Ma kahile kahi silly kura garna sakchhu,
+      kahile timilai chitta dukhla. Tara galti bhayo bhane
+      accept garna, timro kura sunnu, sorry bhannu parne
+      bela sorry bhanna, ani hami bich ko kura milera
+      solve garna chai try garnechhu.
+    </p>
+
+    <p class="song-note" style="color:var(--pink)">
+      Maya bhaneko harek din movie jasto hunu hoina raichha.
+      Normal din ma pani ek-arkalai choose garnu raichha. ❤️
+    </p>
+
+    <button class="btn" onclick="reveal('promise',45)">
+      Dallu ko promise khola 🥹
+    </button>
+
+    <p class="secret" id="promise">
+Bebu, timro feelings mero lagi important chhan.
+Hami disagree gare pani ek-arkalai respect garna nasakne
+chai nahos. Ris bhanda bujhai thulo hos, ego bhanda maya
+thulo hos. Ani hami dubai le relation lai ramro banauna
+effort garirakham. ❤️
+    </p>
+
+  </div>
+</section>
+
+<section>
+
+  <div class="kicker">Page 05 · Last surprise</div>
+
+  <h2>Ekchoti ajhai tap gara, bebu… 🎁</h2>
+
+  <div class="panel center">
+
+    <p class="small">
+      Ready chhau? Yo chai Dallu ko heart bata aako message ho. 👀
+    </p>
+
+    <button class="btn" onclick="reveal('final',65)">
+      Only for my Bebu 💝
+    </button>
+
+    <div class="secret" id="final">
+Meri Binita, mero Bebu… ❤️
+
+Timi mero life ma aayepachhi sabai kura magic jasto bhayo
+bhanera jhut boldina. Tara sano-sano kura haru chai dherai
+pyara bhaye—timro message, timro hasi, timro yaad, timi
+sanga kura garna paune time.
+
+Kahile timilai afno barema doubt lagyo, ya timro din
+narाम्रो bhayo bhane, yo yaad gara hai: timi afai ma pani
+ekdam special chhau. Ani mero lagi chai timi tyo manche
+hau jaslai ma mero din ko sano kura pani sunauna man
+parauchhu.
+
+Dallu ko euta sano wish chha—hami sangai hasna sakau,
+honestly kura garna sakau, ek-arkalai bujhna sikau,
+ani pachi farkera herda “ramra memories banaye chhau hai”
+bhanna sakau.
+
+I love you, Bebu. Timilai dherai maya garchhu.
+Aaja pani, bholi pani, ani hami dubai le maya ra respect
+le choose garne harek din. ❤️
+
+      <div style="font-size:40px;margin-top:20px">
+        💗 🫶 💗
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  Made by Dallu, with Bebu on his mind. ❤️
+  <br>
+  <span style="color:var(--pink)">
+    Binita × Dallu · our little corner
+  </span>
+</footer>
+
+</div>
+
+<script>
+function goTo(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+  shower(12);
+}
+
+function shower(n) {
+  const icons = ["♡", "♥", "💗", "✨", "🌸"];
+
+  for (let i = 0; i < n; i++) {
+    setTimeout(() => {
+      const e = document.createElement("span");
+      e.className = "floater";
+
+      e.textContent =
+        icons[Math.floor(Math.random() * icons.length)];
+
+      e.style.left = Math.random() * 100 + "vw";
+      e.style.fontSize = (15 + Math.random() * 23) + "px";
+
+      e.style.color = [
+        "#ff729e",
+        "#ffc0d5",
+        "#fff1f6"
+      ][Math.floor(Math.random() * 3)];
+
+      e.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+      document.body.appendChild(e);
+
+      setTimeout(() => e.remove(), 7500);
+    }, i * 35);
+  }
+}
+
+function reveal(id, n) {
+  const el = document.getElementById(id);
+
+  el.style.display = "block";
+
+  shower(n);
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+window.addEventListener("load", () => shower(10));
+</script>
+
+</body>
+</html>
